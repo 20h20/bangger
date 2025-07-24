@@ -7,7 +7,7 @@
 				<div class="cbo-title-1 slide-up" itemprop="headline">
 					<h1>
 						<?php pll_e('Erreur 404') ?>
-					</h1> 
+					</h1>
 				</div>
 				<div class="slide-up">
 					<p>

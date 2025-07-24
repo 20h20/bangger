@@ -133,32 +133,27 @@
 
 	// Affichage des modifications via Git
 	function render_custom_git_commits_dashboard_widget() {
-		$token = defined('GITHUB_TOKEN') ? GITHUB_TOKEN : null;
-		$api_url = 'https://api.github.com/repos/20h20/bangger/commits?sha=develop&per_page=5';
-
-		if (!$token) {
+		$api_url = 'https://api.github.com/repos/20h20/bangger/commits?sha=develop';
+	
+		if (!defined('GITHUB_TOKEN')) {
 			echo '<p>Token GitHub non défini.</p>';
 			return;
 		}
-
 		$response = wp_remote_get($api_url, [
 			'headers' => [
 				'User-Agent' => 'WordPress-GitHub-Dashboard',
-				'Authorization' => 'token ' . $token,
+				'Authorization' => 'token ' . GITHUB_TOKEN,
 			],
 		]);
-
 		if (is_wp_error($response)) {
 			echo '<p>Erreur lors de la récupération des commits.</p>';
 			return;
 		}
-
 		$code = wp_remote_retrieve_response_code($response);
 		if ($code !== 200) {
 			echo '<p>Erreur HTTP ' . esc_html($code) . ' reçue depuis GitHub.</p>';
 			return;
 		}
-
 		$body = wp_remote_retrieve_body($response);
 		$commits = json_decode($body, true);
 
@@ -166,9 +161,8 @@
 			echo '<p>Erreur dans les données du commit.</p>';
 			return;
 		}
-
 		echo '<ul class="git-list">';
-		foreach ($commits as $commit) {
+		foreach (array_slice($commits, 0, 5) as $commit) {
 			if (!isset($commit['sha'], $commit['commit']['message'], $commit['commit']['author']['date'])) {
 				continue;
 			}
@@ -176,7 +170,6 @@
 			$message = $commit['commit']['message'];
 			$date = date('d/m/Y H:i', strtotime($commit['commit']['author']['date']));
 			$url = $commit['html_url'];
-
 			echo '<li class="list-el">';
 			echo '<em class="el-date">Le ' . esc_html($date) . '</em>';
 			echo '<span class="el-infos"><code>' . esc_html($sha) . '</code> <strong class="el-title">' . esc_html($message) . '</strong></span><br>';
