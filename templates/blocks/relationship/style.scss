@@ -1,0 +1,114 @@
+@import "../../../src/scss/partials/variables";
+
+/* -------------------------------
+RELATION COMPONENT
+------------------------------- */
+.cbo-relationship{
+    overflow: hidden;
+    position: relative;
+
+    .relationship-textslide{
+        position: absolute;
+        top: -0.625rem;
+        font-size: 2.5rem;
+        line-height: 3.125rem;
+        overflow: hidden;
+
+        .textslide-wrap {
+            width: max-content;
+            animation: textslide 100s linear infinite;
+
+            span {
+                margin: 0 2.5rem;
+                white-space: nowrap;
+            }
+        }
+    }
+    .button-container{
+        margin-bottom: 0.875rem;
+    }
+    .relationship-list{
+        &:not(.slick-slider){
+            display: flex;
+
+            .list-el{
+                width: 100%;
+                min-width: 100%;
+                height: auto;
+                padding: 0 0.625rem;
+            }
+        }
+        .slick-list{
+            margin: 0 -0.625rem;
+
+            .slick-track{
+                .slick-slide{
+                    margin: 0 0.625rem;
+                }
+            }
+        }
+    }
+}
+/* -------------------------------
+SMALL SCREENS
+------------------------------- */
+@media (min-width: $screen-sm-min){
+    .cbo-relationship{
+        .relationship-inner{
+           margin-top: 0;
+        }
+        .relationship-textslide {
+            top: -0.4375rem;
+            font-size: 3.75rem;
+            line-height: 4.375rem;
+        }
+        .button-container{
+            display: flex;
+            justify-content: flex-end;
+        }
+    } 
+}
+/* -------------------------------
+MEDIUM SCREENS
+------------------------------- */
+@media (min-width: $screen-md-min){
+    .cbo-relationship{
+        .relationship-textslide{
+            font-size: 5.625rem;
+            line-height: 6.625rem;
+            top: -1.25rem;
+        }
+        .relationship-list {
+            .slick-list {
+                .slick-track {
+                    .slick-slide{
+                        transform: scale(0.92);
+                        transition: .5s $easeinout;
+
+                        &.slick-active{
+                            transform: scale(1);
+                        }
+                    }
+                }
+            }
+        }
+    } 
+}
+/* -------------------------------
+LARGE SCREENS
+------------------------------- */
+@media (min-width: $screen-lg-min){
+    .cbo-relationship{
+        .relationship-textslide{
+            font-size: 9.375rem;
+            line-height: 10.875rem;
+            top: -1.375rem;
+        }
+        .relationship-inner{
+            padding-top: 2.875rem;
+        }
+        .button-container{
+            margin-bottom: 1.875rem;
+        }
+    }
+}

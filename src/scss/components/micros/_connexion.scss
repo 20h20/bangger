@@ -1,0 +1,39 @@
+/* -------------------------------
+CONNEXION COMPONENT
+------------------------------- */	
+.login{
+	padding: 0;
+	display: flex;
+	background: $colorblack;
+
+	a,
+	label{
+		color:$colorblack;
+	}
+	h1{
+		a{
+			background: url("../img/bangger-baseline.svg") no-repeat center;
+			background-size: contain;
+			width: 12.5rem;
+		}
+	}
+	form .input{
+		border:0.0625rem solid $colorblack;
+	}
+	.button.button-large{
+		background: $colorblack;
+		border: 0rem;
+		margin-top: 1.875rem;
+		width: 100%;
+	}
+	form .input{
+		border-radius: 0rem;
+	}
+	.language-switcher{
+		display: none;
+	}
+	.notice-info,
+	.notice-error{
+		color: $colorblack;
+	}
+}

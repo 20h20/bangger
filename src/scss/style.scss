@@ -1,0 +1,47 @@
+/******************************************************************
+Author: Julien B.
+******************************************************************/
+
+/*********************
+IMPORTING PARTIALS
+*********************/
+@import "partials/variables";
+@import "partials/icons";
+
+/*********************
+STUCTURE COMPONENTS
+*********************/  
+@import "components/structure/base";
+@import "components/structure/header";
+@import "components/structure/footer";
+
+
+/*********************
+MICRO COMPONENTS 
+*********************/
+@import "components/micros/blocarticle";
+@import "components/micros/blocdirector";
+@import "components/micros/blocmovie";
+@import "components/micros/button"; 
+@import "components/micros/connexion";
+@import "components/micros/container";
+@import "components/micros/filters";
+@import "components/micros/megamenu";
+@import "components/micros/modale";
+@import "components/micros/pictures";
+@import "components/micros/private";
+@import "components/micros/rgpd";
+@import "components/micros/slick";
+@import "components/micros/tag";
+@import "components/micros/typography";
+@import "components/micros/videoplayer";
+
+/*********************
+BACK END REMOVE
+*********************/
+.cbo-main{
+    @import "partials/animations";
+}
+.wp-admin{
+    @import "components/micros/back-office";
+}

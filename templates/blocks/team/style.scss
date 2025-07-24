@@ -1,0 +1,102 @@
+@import "../../../src/scss/partials/variables";
+
+/* -------------------------------
+BLOCK TEAM COMPONENT
+------------------------------- */
+.cbo-team{
+	position: relative;
+
+	.team-shape{
+		position: absolute;
+		top: -4.375rem;
+		left: 0;
+
+		img{
+			position: relative;
+		}
+	}
+	.team-inner{
+		z-index: 2;
+	}
+	.team-content{
+		margin-bottom: 3.125rem;
+
+		.team-title{
+			margin-bottom: 1.875rem;
+		}
+	}
+	.team-list{
+		margin-top: 3.125rem;
+		display: flex;
+		flex-wrap: wrap;
+		margin: -0.625rem;
+
+		.list-el{
+			width: 50%;
+			padding: 0.625rem;
+
+			.el-inner{
+				border-radius: $borderextrabig;
+				overflow: hidden;
+				padding-bottom: 167%;
+
+				img{
+					top: -20%;
+					height: 120%;
+				}
+			}
+			&:nth-child(2n){
+				margin-top: 2.5rem;
+			}
+		}
+	}
+}
+/* -------------------------------
+SMALL SCREENS
+------------------------------- */
+@media (min-width:$screen-sm-min) {
+	.cbo-team{
+		.team-inner.cbo-container{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+		.team-content{
+			width: 40%;
+			margin-bottom: 0;
+		}
+		.team-list{
+			width: 55%;
+
+			.list-el{
+				max-width: 16.875rem;
+			}
+		}
+	}
+}
+/* -------------------------------
+MEDIUM SCREENS
+------------------------------- */
+@media (min-width:$screen-md-min) {
+	.cbo-team{
+		.team-list{
+			margin-top: 11.5rem;
+
+			.list-el{
+				&:nth-child(2n){
+					margin-top: 0;
+				}
+			}
+		}
+	}
+}
+/* -------------------------------
+LARGE SCREENS
+------------------------------- */
+@media (min-width:$screen-lg-min) {
+	.cbo-team{	
+		.team-shape{
+			top: -5.625rem;
+		}
+	}
+}

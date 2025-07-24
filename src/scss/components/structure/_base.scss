@@ -1,0 +1,112 @@
+html {
+	min-height:100%;
+
+	&.html--hidden{
+		overflow: hidden;
+	}
+}
+body {
+	&:not(.wp-admin){
+		background: $colorblack;
+		font-size: 1rem;
+		line-height: 1.5rem;
+		font-family: $fontprimary;
+		color: $colorwhite;
+		font-weight: normal;
+		width: 100%;
+		min-height: 100%;
+		text-rendering: geometricPrecision;
+		margin: 0;
+		hyphens: initial;
+	}
+	&.body--hidden,
+	&.body-modale-open{
+		overflow: hidden;
+	}
+}
+*{
+	box-sizing: border-box;
+
+	&:focus {
+		outline:none;
+	}
+}
+p{
+	margin: 0;
+}
+button{
+	background: none;
+	border: none;
+	padding: 0;
+}
+figure{
+	margin: 0;
+}
+.cbo-articles{
+	.articles-list{
+		.list-el{
+			margin: 20px 0;
+		}
+	}
+}
+.cbo-page{
+	section{
+		&:first-child {
+			.cbo-container{
+				margin-top: 120px;
+			}
+		}
+	}
+}
+.movie-cursor {
+	width: 80px;
+	height: 80px;
+	position: fixed;
+	pointer-events: none;
+	z-index: 999;
+	transition: transform 0.1s ease-out;
+	transform: translate(-50%, -50%);
+
+	.cursor-inner{
+		width: 100%;
+		height: 100%;
+		border-radius: 50%;
+		box-shadow: 0 0 0 1px $colorwhite inset;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-transform: uppercase;
+		color:$colorwhite;
+		font-size: 12px;
+		transform: scale(0);
+		opacity: 0;
+		transition: all 0.3s ease-out;
+
+	}
+	&.visible{
+		.cursor-inner{
+			transform: scale(1);
+			opacity: 1;
+		}
+	}
+}
+/* -------------------------------
+MEDIUM SCREENS
+------------------------------- */
+@media (min-width: $screen-md-min){
+	body {
+		&:not(.wp-admin){
+			font-size: 18px;
+			line-height: 26px;
+		}
+	}
+	.cbo-page{
+		section{
+			&:first-child {
+				.cbo-container{
+					margin-top: 190px;
+				}
+			}
+		}
+	}
+}

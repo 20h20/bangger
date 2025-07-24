@@ -1,0 +1,26 @@
+@charset "UTF-8";
+/*!
+* Theme Name: Bangger
+* Description: Nous mettons notre vision exigeante de l’IA pour créervos bangers visuels  
+* Version: 1.0
+* Author: Julien B.
+*
+* License: MIT
+* License URI: http://opensource.org/licenses/mit-license.php
+*/
+@keyframes textslide {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+@keyframes textslide-reverse {
+    from {
+        transform: translateX(-50%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}

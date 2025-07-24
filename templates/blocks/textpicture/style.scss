@@ -1,0 +1,63 @@
+@import "../../../src/scss/partials/variables";
+
+/* -------------------------------
+TEXT PICTURE COMPONENT
+------------------------------- */
+.cbo-textpicture {
+  .textpicture-content{
+    .content-title{
+      margin-bottom: 1.25rem;
+    }
+  }
+  .textpicture-picture{
+    margin-bottom: 1.25rem;
+    overflow: hidden;
+
+    img{
+      position: relative;
+    }
+  }
+}
+/* -------------------------------
+MEDIUM SCREENS
+------------------------------- */
+@media (min-width: $screen-md-min) {
+  .cbo-textpicture {
+    .textpicture-inner{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .textpicture-picture{
+      width: 43%;
+      margin-bottom: 0;
+      padding-bottom: 55%;
+
+      img{
+        position: absolute;
+        height: 110%;
+        top: -10%;
+      }
+    }
+    .textpicture-content {
+      width: 48%;
+      padding: 5rem 0;
+    }
+    &.textpicture--reverse{
+      .textpicture-inner{
+        flex-direction: row-reverse;
+      }
+    }
+  }
+}
+/* -------------------------------
+LARGE SCREENS
+------------------------------- */
+@media (min-width: $screen-lg-min) {
+  .cbo-textpicture {
+    .textpicture-content {
+      width: 40%;
+    }
+  }
+}

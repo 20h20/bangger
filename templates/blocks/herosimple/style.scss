@@ -1,0 +1,15 @@
+@import "../../../src/scss/partials/variables";
+
+/* -------------------------------
+HERO SIMPLE COMPONENT
+------------------------------- */
+.cbo-herosimple{
+    text-align: center;
+    position: relative;
+    z-index: 2;
+
+    .herosimple-chapo{
+        margin: 1.25rem auto 1.875rem;
+        max-width: 50rem;
+    }
+}

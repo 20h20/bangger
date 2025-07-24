@@ -1,0 +1,56 @@
+@import "../../../src/scss/partials/variables";
+
+/* -------------------------------
+MOVIES COMPONENT
+------------------------------- */
+.cbo-movies{
+    .movies-inner{
+        margin: 4.375rem 0;
+    }
+    .movies-top{
+        padding: 0 1.25rem;
+
+        .movies-title{
+            margin-bottom: 1.875rem;
+        }
+    }
+    .movies-list{
+        margin-top: 3.125rem;
+    }
+}
+/* -------------------------------
+SMALL SCREENS
+------------------------------- */
+@media (min-width: $screen-sm-min){
+    .cbo-movies{
+        .movies-top{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .movies-title{
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+/* -------------------------------
+MEDIUM SCREENS
+------------------------------- */
+@media (min-width: $screen-md-min){
+    .cbo-movies{
+        .movies-list{
+            margin-top: 5rem;
+        }
+    }
+}
+/* -------------------------------
+LARGE SCREENS
+------------------------------- */
+@media (min-width: $screen-lg-min){
+    .cbo-movies{
+        .movies-inner{
+            margin: 7.5rem 0;
+        }
+    }
+}

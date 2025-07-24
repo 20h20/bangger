@@ -1,0 +1,23 @@
+/* -------------------------------
+TAGS MICRO COMPONENT
+------------------------------- */
+.tags-list{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: -0.3125rem;
+
+  .list-el{
+    background: rgba($colorwhite, .15);
+    border-radius: $bordersmall;
+    color: $colorwhite;
+    height: 1.875rem;
+    padding: 0 0.625rem;
+    font-size: 0.75rem;
+    line-height: 0.75rem;
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    margin: 0.3125rem;
+  }
+}

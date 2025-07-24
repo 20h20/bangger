@@ -1,0 +1,135 @@
+/* -------------------------------
+DIRECTOR MICRO COMPONENT
+------------------------------- */
+.directors-list {
+	.list-el {
+		display: block; 
+
+		.el-inner {
+			color: $colorwhite;
+			padding: 1.25rem;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			position: relative;
+			z-index: 2;
+
+			.el-content {
+				display: flex;
+				align-items: center;
+				margin-bottom: 0.625rem;
+
+				.content-firstname {
+					display: block;
+					margin-right: 0.875rem;
+				}
+				.content-lastname {
+					overflow: hidden;
+					display: block;
+					text-transform: uppercase;
+
+					.char {
+						display: inline-block;
+						position: relative;
+						--delay: calc(var(--i) * 50ms);
+
+						.front,
+						.back {
+							display: inline-block;
+							transition: transform 0.4s ease, opacity 0.4s ease;
+							transition-delay: var(--delay);
+							backface-visibility: hidden;
+							transform-origin: bottom left;
+						}
+						.back {
+							position: absolute;
+							top: 0;
+							left: 0;
+							transform: translateY(100%) scaleY(0);
+							opacity: 0;
+						}
+					}
+				}
+			}
+			.tags-list {
+				width: 100%;
+				justify-content: center;
+			}
+		}
+	}
+	.el-video{
+		pointer-events: none;
+		display: none;
+	}
+}
+/* -------------------------------
+SMALL SCREENS
+------------------------------- */
+@media (min-width: $screen-sm-min){
+	.directors-list {
+		.list-el{
+			width: fit-content;
+			margin: 0 auto;
+
+			.el-inner{
+				.el-content{
+					margin-bottom: 0;
+				}
+				.tags-list{
+					margin-left: 1.25rem;
+					width: auto;
+				}
+			}
+		}
+	}
+}
+/* -------------------------------
+MEDIUM SCREENS
+------------------------------- */
+@media (min-width: $screen-md-min){
+	.directors-list {
+		.list-el{
+			.el-inner{
+				padding: 1.875rem 1.25rem;
+
+				&:hover {
+					.el-content {
+						.content-lastname {
+							.char {
+								.front {
+									transform: translateY(-100%) scaleY(0);
+									opacity: 0;
+								}
+								.back {
+									transform: translateY(0%) scaleY(1);
+									opacity: 1;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		.el-video{
+			display: block;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+			opacity: 0;
+			transition: all .4s;
+	
+			&:after{
+				content: '';
+				background: rgba($colorblack, .6);
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+}

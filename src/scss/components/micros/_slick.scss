@@ -1,0 +1,106 @@
+.slick-slider {
+	position: relative;
+
+	.slick-list {
+		overflow: visible;
+
+		&:focus {
+			outline: none;
+		}
+		&.dragging {
+			cursor: hand;
+		}
+		.slick-track {
+			position: relative;
+			display: flex;
+			transition: transform 0.4s;
+
+			.slick-slide > div{
+				height:100%;
+			}
+		}
+	}
+	.slick-slide img,
+	.slick-initialized .slick-slide {
+		display: block;
+	}
+}
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+	transform: translate3d(0, 0, 0);
+}
+.slick-arrow{
+	color: $colorgreydark;
+	background: $colorwhite;
+	top: 50%;
+	margin-top: -1.5625rem;
+	height: 3.125rem;
+	width: 3.125rem;
+	cursor: pointer;
+	position: absolute;
+	z-index: 1;
+	font-size: 0;
+	display: flex !important;
+	align-items: center;
+	justify-content: center;
+	border-radius: 99rem;
+	opacity: 1;
+	visibility: visible;
+	pointer-events: all;
+	transition: all 1s cubic-bezier(0.85, 0, 0.15, 1) 0s;
+
+	&:after{
+		font-family:"icons";
+		position: absolute;
+		font-size: 1.25rem;
+		content:"\f102";
+	}
+	&.slick-prev{
+		left: -0.9375rem;
+
+		&:after{
+			content:"\f103";
+		}
+	}
+	&.slick-next{
+		right: -0.9375rem;
+	}
+	&.slick-disabled{
+		display: none !important;
+	}
+}
+/* -------------------------------
+SMALL SCREENS
+------------------------------- */
+@media (min-width: $screen-sm-min){
+	.slick-arrow{
+		&.slick-prev{
+			left: -1.875rem;
+		}
+		&.slick-next {
+			right: -1.875rem;
+		}
+	}
+}
+/* -------------------------------
+LARGE SCREENS
+------------------------------- */
+@media (min-width: $screen-lg-min){
+	.slick-arrow{
+		margin-top: -2.5rem;
+		height: 5rem;
+		width: 5rem;
+		transition: .5s $easeinout;
+
+		&.slick-prev{
+			left: -6.25rem;
+		}
+		&.slick-next {
+			right: -6.25rem;
+		}
+		&:hover{
+			color: $colorwhite;
+			background: $colorgreydark;
+		}
+	}
+}

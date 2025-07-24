@@ -1,0 +1,60 @@
+@import "../../../src/scss/partials/variables";
+
+/* -------------------------------
+TEXT TITLE COMPONENT
+------------------------------- */
+.cbo-textitle {
+    border-radius: $borderbig;
+
+    &.textitle--black{
+        background: $colorblack;
+    }
+    &.textitle--grey{
+        background: $colorwhite;
+        color: $colorgreydark;
+    }
+    .textitle-maintitle{
+        margin-bottom: 3.125rem;
+    }
+    .textitle-content{
+        .content-title{
+            margin-bottom: 1.875rem;
+        }
+    }
+}
+/* -------------------------------
+SMALL SCREENS
+------------------------------- */
+@media (min-width: $screen-sm-min) {
+    .cbo-textitle {
+        .textitle-maintitle{
+            width: 100%;
+        }
+        .textitle-content{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .content-title{
+                width: 40%;
+                margin-bottom: 0;
+            }
+            .content-text{
+                width: 50%;
+            }
+        }
+    }
+}
+/* -------------------------------
+LARGE SCREENS
+------------------------------- */
+@media (min-width: $screen-lg-min) {
+    .cbo-textitle {
+        border-radius: $borderextrabig;
+
+        .textitle-maintitle{
+            margin-bottom: 5.5rem;
+        }
+    }
+}

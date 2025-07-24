@@ -1,0 +1,196 @@
+<?php
+	$uptitle	= get_field('herovideo_uptitle');
+	$title	= get_field('herovideo_title');
+	$video	= get_field('herovideo_video');
+?>
+
+<!-- <section class="cbo-videogallery">
+	<div class="videogallery-logo">
+		<div class="logo-inner">
+			<span class="logo-baseline baseline--left">
+				Ai film
+			</span>
+			<div class="inner-picture cbo-picture-contain">
+				<svg class="logo-svg" version="1.1" viewBox="0 0 847.2 210.1">
+					<defs>
+						<linearGradient id="logoGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+							<stop offset="0%" stop-color="#FFB1B1" />
+							<stop offset="100%" stop-color="#FFB1B1" />
+						</linearGradient>
+					</defs>
+					<path fill="url(#logoGradient)" d="M0,5.9h54.9c25.7,0,41.8,15.9,41.8,38.8l.3,29c0,15.6-7,25.9-17.6,31.2,11.4,5.3,18.7,14.2,18.7,31.5v29.8c0,22.3-15.6,40.4-45.2,40.4H0V5.9ZM52.4,92.4c9.8,0,19.8-5,19.8-17.6v-.3c0-10.9-7-16.7-17.6-16.7h-29.8v34.6h27.6ZM53,154.9c13.1,0,20.1-6.7,20.1-17.6v-.3c0-13.1-8.6-17.6-20.9-17.6h-27.3v35.4h28.2Z"/>
+					<path fill="url(#logoGradient)" d="M106.3,191.1L150.3,5.9h27.3l44.6,185.2v15.6h-25.7l-8.6-39h-47.7l-8.4,39h-25.7v-15.6ZM177.1,119.7l-10.3-46.9h-6.1l-10,46.9h26.5Z"/>
+					<path fill="url(#logoGradient)" d="M263.6,5.9l45.2,107.7h2.8V5.9h24.5v200.8h-28.4l-45.5-105.7h-2.8v105.7h-24.5V5.9h28.7Z"/>
+					<path fill="url(#logoGradient)" d="M352.6,146.8v-80c0-38.8,27.3-64.4,65.8-64.4s54.9,17.6,60,49.4v35.4l-24.8.3v-1.4c-3.9-17.3-19-26.5-35.1-26.5-23.7,0-40.7,16.5-40.7,41v13.7c0,24.5,16.2,40.7,39.6,40.7s35.1-12.8,36.5-32.6h-40.7v-22.9h63l2.2,2.2v105.2h-16.2l-4.7-18.7c-8.1,14.2-25.1,22-43.2,22-37.7,0-61.6-24.8-61.6-63.3Z"/>
+					<path fill="url(#logoGradient)" d="M494,146.8v-80c0-38.8,27.3-64.4,65.8-64.4s54.9,17.6,60,49.4v35.4l-24.8.3v-1.4c-3.9-17.3-19-26.5-35.1-26.5-23.7,0-40.7,16.5-40.7,41v13.7c0,24.5,16.2,40.7,39.6,40.7s35.1-12.8,36.5-32.6h-40.7v-22.9h63l2.2,2.2v105.2h-16.2l-4.7-18.7c-8.1,14.2-25.1,22-43.2,22-37.7,0-61.6-24.8-61.6-63.3Z"/>
+					<path fill="url(#logoGradient)" d="M638.7,5.9h90.9v56.1h-66.1v32.9h61.9v22.9h-61.9v32.9h66.7v56.1h-91.5V5.9Z"/>
+					<path fill="url(#logoGradient)" d="M746.7,5.9h54.9c27.1,0,43,18.4,43,41.3v29.6c0,17.3-8.9,28.7-21.5,34.6,10.3,4.2,14.2,12.8,16.2,25.1l6.7,70.3h-25.4l-5.9-46.6c-2.8-13.9-7.5-19.8-20.9-20.1h-22.3v66.7h-24.8V5.9ZM798.8,93.2c12.6,0,20.9-6.1,20.9-19.2v-.3c0-12-8.4-17.6-20.9-17.6h-27.3v37.1h27.3Z"/>
+				</svg>
+			</div>
+			<span class="logo-baseline baseline--left">
+				Production
+			</span>
+		</div>
+	</div>
+
+	<div class="videogallery-list">
+		<div class="liste-el">
+			<div class="el-inner cbo-picture-cover">
+				<img
+					decoding="async"
+					src="<?php bloginfo('template_directory'); ?>/library/img/tmp/screen1.jpg"
+					alt="<?php echo get_bloginfo('description'); ?>" sizes="100vw"
+					width="200" height="32"
+					itemprop="logo"
+				>
+			</div>
+		</div>
+
+		<div class="liste-el">
+			<div class="el-inner cbo-picture-cover">
+				<img
+					decoding="async"
+					src="<?php bloginfo('template_directory'); ?>/library/img/tmp/screen1.jpg"
+					alt="<?php echo get_bloginfo('description'); ?>" sizes="100vw"
+					width="200" height="32"
+					itemprop="logo"
+				>
+			</div>
+		</div>
+
+		<div class="liste-el">
+			<div class="el-inner cbo-picture-cover">
+				<img
+					decoding="async"
+					src="<?php bloginfo('template_directory'); ?>/library/img/tmp/screen1.jpg"
+					alt="<?php echo get_bloginfo('description'); ?>" sizes="100vw"
+					width="200" height="32"
+					itemprop="logo"
+				>
+			</div>
+		</div>
+
+		<div class="liste-el">
+			<div class="el-inner cbo-picture-cover">
+				<img
+					decoding="async"
+					src="<?php bloginfo('template_directory'); ?>/library/img/tmp/screen1.jpg"
+					alt="<?php echo get_bloginfo('description'); ?>" sizes="100vw"
+					width="200" height="32"
+					itemprop="logo"
+				>
+			</div>
+		</div>
+
+		<div class="liste-el">
+			<div class="el-inner cbo-picture-cover">
+				<img
+					decoding="async"
+					src="<?php bloginfo('template_directory'); ?>/library/img/tmp/screen1.jpg"
+					alt="<?php echo get_bloginfo('description'); ?>" sizes="100vw"
+					width="200" height="32"
+					itemprop="logo"
+				>
+			</div>
+		</div>
+
+		<div class="liste-el">
+			<div class="el-inner cbo-picture-cover">
+				<img
+					decoding="async"
+					src="<?php bloginfo('template_directory'); ?>/library/img/tmp/screen1.jpg"
+					alt="<?php echo get_bloginfo('description'); ?>" sizes="100vw"
+					width="200" height="32"
+					itemprop="logo"
+				>
+			</div>
+		</div>
+
+		<div class="liste-el">
+			<div class="el-inner cbo-picture-cover">
+				<img
+					decoding="async"
+					src="<?php bloginfo('template_directory'); ?>/library/img/tmp/screen1.jpg"
+					alt="<?php echo get_bloginfo('description'); ?>" sizes="100vw"
+					width="200" height="32"
+					itemprop="logo"
+				>
+			</div>
+		</div>
+
+		<div class="liste-el">
+			<div class="el-inner cbo-picture-cover">
+				<img
+					decoding="async"
+					src="<?php bloginfo('template_directory'); ?>/library/img/tmp/screen1.jpg"
+					alt="<?php echo get_bloginfo('description'); ?>" sizes="100vw"
+					width="200" height="32"
+					itemprop="logo"
+				>
+			</div>
+		</div>
+	</div>
+</section> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="cbo-herovideo">
+	<div class="herovideo-inner">
+		<div class="herovideo-content cbo-container container--nomargin">
+			<?php if($uptitle): ?>
+				<div class="herovideo-uptitle slide-up">
+					<?php echo $uptitle; ?>
+				</div>
+			<?php endif; ?>
+
+			<?php if($title): ?>
+				<div class="herovideo-title slide-up" itemprop="headline">
+					<?php echo $title; ?>
+				</div>
+			<?php endif; ?>
+		</div>
+
+		<div class="herovideo-box cbo-picture-cover">
+			<video autoplay="autoplay" muted itemprop="video" loop itemscope itemtype="http://schema.org/VideoObject">
+				<source
+					type="video/mp4"
+					src="<?php echo $video['url'] ?>"
+					itemprop="contentUrl"
+				>
+			</video>
+		</div>
+	</div>
+
+	<div class="herovideo-full cbo-picture-cover">
+		<video autoplay="autoplay" muted itemprop="video" loop itemscope itemtype="http://schema.org/VideoObject">
+			<source
+				type="video/mp4"
+				src="<?php echo $video['url'] ?>"
+				itemprop="contentUrl"
+			>
+		</video>
+	</div>
+</section>

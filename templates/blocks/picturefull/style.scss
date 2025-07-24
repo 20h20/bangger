@@ -1,0 +1,33 @@
+@import "../../../src/scss/partials/variables";
+
+/* -------------------------------
+PICTURE FULL COMPONENT
+------------------------------- */
+.cbo-picturefull {
+  .picturefull-wrapper{
+    padding-bottom: 80%;
+    position: relative;
+
+    .picturefull-picture {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+
+      .parallax-img {
+        will-change: transform;
+        transition: transform 0.1s ease-out;
+      }
+    }
+  }
+}
+/* -------------------------------
+SMALL SCREENS
+------------------------------- */
+@media (min-width: $screen-sm-min){
+  .cbo-picturefull {
+    .picturefull-wrapper{
+      padding-bottom: 60%;
+    }
+  }
+}

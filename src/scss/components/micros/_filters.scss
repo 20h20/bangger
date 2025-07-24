@@ -1,0 +1,102 @@
+/* -------------------------------
+FILTERS MICRO COMPONENT
+------------------------------- */
+.cbo-filters{
+	margin-top: 1.875rem;
+
+	.filters-inner{
+		position: relative;
+		z-index: 4;
+	}
+	.filters-menu{
+		display: flex;
+		align-items: center;
+		width: 100%;
+		padding: 0 1.25rem;
+		color: $colorwhite;
+		height: 3.75rem;
+		background: rgba($colorwhite, .15);
+		position: relative;
+
+		&:after{
+			content: '';
+			display : inline-block;
+			height : 0;
+			width : 0;
+			border-top : 0.5625rem solid $colorwhite;
+			border-right : 0.3125rem solid transparent;
+			border-left : 0.3125rem solid transparent;
+			position: absolute;
+			right: 1.25rem;
+			transition: all .3s ease-in-out;
+		}
+		&.filters-menu-click{
+			&:after{
+				transform: rotate(180deg);
+			}
+		}
+	}
+	.tags-list{
+		background: rgba($colorwhite, .15);
+		top: 5rem;
+		left: 0.3125rem;
+		display: flex;
+		justify-content: center;
+		padding: 0 0.625rem 0.625rem 0.625rem;
+		width: 100%;
+		opacity: 0;
+		visibility: hidden;
+		position: absolute;
+		z-index: 4;
+		transition: all .3s ease-in-out;
+
+		.list-el{
+			&.el--active{
+				.el-inner{
+					color:$colorwhite;
+				}
+			}
+		}
+		&.list--open{
+			opacity: 1;
+			visibility:visible;
+			top: 4.0625rem;
+		}
+	}
+}
+/* -------------------------------
+SMALL SCREENS
+------------------------------- */
+@media (min-width: $screen-sm-min){
+	.cbo-filters{
+		.filters-menu{
+			display: none;
+		}
+		.tags-list{
+			background: none;
+			align-items: center;
+			flex-wrap: wrap;
+			position: relative;
+			opacity: 1;
+			visibility: visible;
+			top: inherit;
+			padding: 0;
+			margin: -0.3125rem;
+
+			&.list--open{
+				top: 0;
+			}
+			.list-el{
+				.el-inner{
+					opacity: .5;
+					transition: all.4s;
+				}
+				&.el--active, &:hover{
+					.el-inner{
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+}

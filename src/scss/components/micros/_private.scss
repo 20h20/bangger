@@ -1,0 +1,57 @@
+/* -------------------------------
+PRIVATE PAGE COMPONENT
+------------------------------- */
+.post-password-form{
+  max-width: 40.625rem;
+  margin: 9.375rem 1.25rem;
+  background: $colorwhite;
+  text-align: center;
+  border-radius: 0.3125rem;
+  padding: 1.25rem;
+  color: $colorblack;
+
+  input{
+    height: 3.125rem;
+    border-radius: 1584px;
+    color: $colorblack;
+    border: none;
+    padding: 0 1.25rem;
+    box-shadow: 0 0 0 0.0625rem rgba($colorblack, 1) inset;
+  }
+  label{
+    input{
+      width: 100%;
+      margin-top: 0.625rem;
+    }
+  }
+  p{
+    margin-bottom: 1.875rem;
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+  input[type="submit"]{
+    margin-top: 1.875rem;
+    background: none;
+    width: 100%;
+    padding: 0 0.625rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: all .4s;
+  }
+}
+/* -------------------------------
+SMALL SCREENS
+------------------------------- */
+@media (min-width: $screen-sm-min) {
+  .post-password-form{
+    margin: 12.5rem auto 6.25rem auto;
+
+    input[type="submit"]{
+      min-width: 12.5rem;
+    }
+  }
+}

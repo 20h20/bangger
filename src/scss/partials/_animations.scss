@@ -1,0 +1,71 @@
+/* -------------------------------
+KEYFRAMES
+------------------------------- */
+.slide-up,
+.slide-down,
+.slide-left,
+.slide-right,
+.scale-up,
+.scale-down{
+	opacity: 0;
+	transition:opacity .4s linear .25s, transform 1s $easeinout;
+}
+.slide-up{
+	transform: translateY(50%) scale(1);
+}
+.slide-down{
+	transform: translateY(-50%) scale(1);
+}
+.slide-left{
+	transform: translateX(150px) scale(.95);
+}
+.slide-right{
+	transform: translateX(-150px) scale(.95);
+}
+.anim-scroll{
+	opacity:1;
+	transform: translate(0,0) scale(1);
+}
+@keyframes headerdown {
+	from {
+		transform: translateY(-100%);
+	}
+	to {
+		transform: translateY(0%);
+	}
+}
+@keyframes animateGrain{
+	0%, 100% {
+		transform:translate(0, 0)
+	}
+	10%{
+		transform:translate(-5%,-10%)
+	}
+	20%{
+		transform:translate(-15%,-20%)
+	}
+	30%{
+		transform:translate(-5%,-10%)
+	}
+	40%{
+		transform:translate(-15%,-20%)
+	}
+	50%{
+		transform:translate(-5%,-10%)
+	}
+	60%{
+		transform:translate(-15%,-20%)
+	}
+	70%{
+		transform:translate(-5%,-10%)
+	}
+	80%{
+		transform:translate(-15%,-20%)
+	}
+	90%{
+		transform:translate(-5%,-10%)
+	}
+	100%{
+		transform:translate(-15%,-20%)
+	}
+}

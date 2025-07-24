@@ -1,0 +1,222 @@
+@import "../../../src/scss/partials/variables";
+
+/* -------------------------------
+HERO RICH COMPONENT
+------------------------------- */
+// .cbo-videogallery {
+//     height: 100vh;
+//     overflow: hidden;
+//     position: relative;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+
+//     .videogallery-logo {
+//         position: absolute;
+//         top: 50%;
+//         left: 50%;
+//         transform: translate(-50%, -50%);
+//         height: 198px;
+//         width: fit-content;
+//         z-index: 10;
+//         overflow: hidden;
+
+//         .logo-baseline{
+//             width: max-content;
+//         }
+//         .logo-inner {
+//             display: flex;
+//             justify-content: space-between;
+//             align-items: center;
+//             height: 100%;
+
+//             .inner-picture{
+//                 height: 100%;
+//                 width: 700px;
+//                 margin: 0 110px;
+//                 display: flex;
+//                 align-items: center;
+
+//                 .logo-svg {
+//                     transition: filter 0.8s ease-in-out, transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+//                     filter: hue-rotate(0deg);
+//                     transform: scaleY(0.03);
+//                     transform-origin: center;
+//                 }
+//             }
+//         }
+//         &.is-active {
+//             .logo-inner {
+//                 .inner-picture{
+//                     .logo-svg {
+//                         transform: scaleY(1);
+//                     }
+//                 }
+//             }
+//         }
+//     }
+
+//     .videogallery-list {
+//         position: relative;
+//         width: 100%;
+//         overflow: visible;
+
+//         .slick-list {
+//             height: 200vh !important;
+//             overflow: visible;
+//         }
+//         .slick-track {
+//             display: flex !important;
+//             flex-direction: column;
+//             align-items: center;
+//         }
+//         .liste-el {
+//             height: calc(100vh - 300px); // hauteur réduite
+//             margin: 150px 0;              // 50px en haut et en bas
+//             overflow: hidden;
+//             position: relative;
+//             transition: transform 0.6s ease;
+          
+//             .el-inner {
+//               height: 100%;
+//               width: 600px;
+//               margin: 0 auto;
+          
+//               img {
+//                 height: 100%;
+//                 width: 100%;
+//                 object-fit: cover;
+//                 display: block;
+//               }
+//             }
+//           }
+//     }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.cbo-herovideo{
+    position: relative;
+    height: 100vh;
+    padding: 4.375rem 1.25rem 1.25rem 1.25rem;
+
+    .herovideo-inner{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    .herovideo-content{
+        position: absolute;
+        color: $colorwhite;
+        z-index: 2;
+        mix-blend-mode: difference;
+        padding-bottom: 2.5rem;
+
+        .herovideo-uptitle{
+            display: block;
+            font-size: 2.5rem;
+            line-height: 2.5rem;
+        }
+        .herovideo-title{
+            font-size: 22vw;
+            line-height: 22vw;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+    } 
+    .herovideo-box{
+        position: absolute;
+        padding: 0;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: $borderbig;
+        overflow: hidden;
+
+        video{
+            transform: scale(1.3);
+        }
+    }
+    .herovideo-full{
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height:100vh;
+
+        &:after{
+            content: '';
+            background: rgba($colorblack, .4);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            backdrop-filter: blur(2.125rem);
+        }
+    }
+}
+/* -------------------------------
+MEDIUM SCREENS
+------------------------------- */
+@media (min-width: $screen-md-min) {
+    .cbo-herovideo{
+        padding: 6.25rem 1.25rem 2.5rem 1.25rem;
+    }
+}
+/* -------------------------------
+LARGE SCREENS
+------------------------------- */
+@media (min-width: $screen-lg-min) {
+    .cbo-herovideo{
+        padding: 6.25rem 2.125rem 3.125rem 2.125rem;
+
+        .herovideo-content {
+            padding-bottom: 4.375rem;
+
+            .herovideo-uptitle{
+                font-size: 5rem;
+                line-height: 5.375rem;
+            }
+            .herovideo-title{
+                margin-top: 0;
+                font-size: 12.9375rem;
+                line-height: 8.5rem;
+            }
+        }
+    }
+}

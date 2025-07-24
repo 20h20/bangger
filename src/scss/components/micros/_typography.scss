@@ -1,0 +1,190 @@
+/* -------------------------------
+TYPOGRAPHY
+------------------------------- */
+@font-face {
+    font-family: 'ES Replan Variform 2';
+    src: url('../fonts/ESReplanVariform-Regular2.woff2') format('woff2'),
+        url('../fonts/ESReplanVariform-Regular2.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+a{
+	text-decoration: none;
+}
+ul{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+.cbo-title-1, .cbo-title-2, .cbo-title-3, .cbo-title-4,
+h1,h2,h3,h4,h5,h6{
+	margin: 0;
+}
+.cbo-title-2, .cbo-title-2 h1, .cbo-title-2 h2, .cbo-title-2 h3, .cbo-title-2 h4.cbo-title-2 h5, .cbo-title-2 p{
+	font-size: 30px;
+	line-height: 36px;
+	font-weight: normal;
+}
+.cbo-title-3, .cbo-title-3 h1, .cbo-title-3 h2, .cbo-title-3 h3, .cbo-title-3 h4.cbo-title-3 h5, .cbo-title-3 p{
+	font-size: 25px;
+	line-height: 33px;
+}
+.cbo-title-4, .cbo-title-4 h1, .cbo-title-4 h2, .cbo-title-4 h3, .cbo-title-4 h4.cbo-title-4 h5, .cbo-title-4 p{
+	font-size: 20px;
+	line-height: 28px;
+}
+.cbo-title-5, .cbo-title-5 h1, .cbo-title-5 h2, .cbo-title-5 h3, .cbo-title-5 h4.cbo-title-5 h5, .cbo-title-5 p{
+	font-size: 18px;
+	line-height: 23px;
+}
+.cbo-cms{
+	ul,
+	p{
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+	p{
+		margin: 24px 0;
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+		&:first-child{
+			margin-top: 0;
+		}
+	}
+	a{
+		&:not(.cbo-button){
+			text-decoration: underline;
+		}
+	}
+	h1,h2,h3,h4{
+		margin: 30px 0 20px 0;
+
+		&:first-child{
+			margin-top: 0;
+		}
+	}
+	h2, h1{
+		font-size: 30px;
+		line-height: 36px;
+	}
+	h3{
+		font-size: 25px;
+		line-height: 33px;
+	}
+	h4{
+		font-size: 20px;
+		line-height: 28px;
+	}
+	h5{
+		font-size: 18px;
+		line-height: 23px;
+	}	
+	ul{
+		margin: 30px 0;
+		padding-left: 10px;
+
+		&:first-child{
+			margin-top: 0;
+		}
+		li{
+			position: relative;
+			padding:0 0 0 18px;
+			margin-bottom: 14px;
+
+			&:before{
+				content: '';
+				width: 4px;
+				height: 4px;
+				border-radius: 1584px;
+				background: $colorgreymedium;
+				position: absolute;
+				left: 0;
+				top: 10px;
+			}
+			&:last-child{
+				padding-bottom: 0;
+			}
+		}
+	}
+	ol{
+		padding: 0 0 0 20px;
+
+		li{
+			padding:0 0 0 10px;
+			margin-bottom: 14px;
+			
+			&::marker{
+				color: $colorgreymedium;
+			}
+		}
+	}
+	hr{
+		border: 0;
+		border-bottom: 1px solid rgba($colorgreymedium, .2);
+		margin: 50px 0;
+	}
+	figure{
+		margin: 60px auto;
+		width: 100%;
+		height: auto;
+	}
+	iframe{
+		margin: 50px auto;
+		display: block;
+		max-width: 100%;
+
+		img{
+			margin: 0;
+		}
+	}
+	img{
+		border-radius: $borderbig;
+		margin: 50px auto;
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+}
+/* -------------------------------
+MEDIUM SCREENS
+------------------------------- */
+@media (min-width: $screen-md-min){
+	.cbo-title-2, .cbo-title-2 h1, .cbo-title-2 h2, .cbo-title-2 h3, .cbo-title-2 h4.cbo-title-2 h5, .cbo-title-2 p{
+		font-size: 50px;
+		line-height: 60px;
+	}
+	.cbo-title-3, .cbo-title-3 h1, .cbo-title-3 h2, .cbo-title-3 h3, .cbo-title-3 h4.cbo-title-3 h5, .cbo-title-3 p{
+		font-size: 35px;
+		line-height: 35px;
+	}
+	.cbo-title-4, .cbo-title-4 h1, .cbo-title-4 h2, .cbo-title-4 h3, .cbo-title-4 h4.cbo-title-4 h5, .cbo-title-4 p{
+		font-size: 30px;
+		line-height: 40px;
+	}
+	.cbo-title-5, .cbo-title-5 h1, .cbo-title-5 h2, .cbo-title-5 h3, .cbo-title-5 h4.cbo-title-5 h5, .cbo-title-5 p{
+		font-size: 25px;
+		line-height: 30px;
+	}
+	.cbo-cms{
+		h2, h1{
+			font-size: 50px;
+			line-height: 60px;
+		}
+		h3{
+			font-size: 35px;
+			line-height: 35px;
+		}
+		h4{
+			font-size: 30px;
+			line-height: 40px;
+		}
+		h5{
+			font-size: 25px;
+			line-height: 30px;
+		}
+	}
+}

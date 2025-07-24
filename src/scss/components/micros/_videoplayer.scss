@@ -1,0 +1,52 @@
+/* -------------------------------
+VIDEO PLAYER COMPONENT
+------------------------------- */
+.custom-controls {
+	position: absolute;
+	bottom: 0.625rem;
+	left: 0.625rem;
+	right: 0.625rem;
+	display: flex;
+	align-items: center;
+	gap: 0.625rem;
+	padding: 0.625rem;
+	z-index: 2;
+
+	i{
+		color: $colorwhite;
+		font-size: 1.625rem;
+
+		&.icon--pause{
+			font-size: 1.125rem;
+		}
+	}
+	.seekBar {
+		-webkit-appearance: none;
+		appearance: none;
+		width: 100%;
+		height: 2px;
+		background: linear-gradient(to right, $colorwhite 0%, rgba($colorwhite, .5) 0%);
+		outline: none;
+		cursor: pointer;
+		transition: background 0.1s linear;
+	}
+	.seekBar::-webkit-slider-thumb {
+		-webkit-appearance: none;
+		height: 0;
+		width: 0;
+		opacity: 0;
+	}
+	.seekBar::-moz-range-thumb {
+		height: 0;
+		width: 0;
+		opacity: 0;
+	}
+}
+/* -------------------------------
+MEDIUM SCREENS
+------------------------------- */
+@media (min-width:$screen-md-min) {
+	.custom-controls {
+		padding-bottom: 1.875rem;
+	}
+}

@@ -1,0 +1,45 @@
+@import "../../../src/scss/partials/variables";
+
+/* -------------------------------
+DIRECTORS COMPONENT
+------------------------------- */
+.cbo-directors{
+    background: $colorblack;
+    border-radius: $borderbig;
+
+    .directors-inner.cbo-container{
+        max-width: inherit;
+    }
+    .directors-top{
+        .directors-title{
+            margin-bottom: 1.875rem;
+        }
+    }
+}
+/* -------------------------------
+SMALL SCREENS
+------------------------------- */
+@media (min-width: $screen-sm-min){
+    .cbo-directors{
+        .directors-inner.cbo-container{
+            padding: 0 1.25rem;
+        }
+    }
+}
+/* -------------------------------
+MEDIUM SCREENS
+------------------------------- */
+@media (min-width: $screen-md-min){
+    .cbo-directors{
+        .directors-top{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 4.125rem;
+
+            .directors-title{
+                margin-bottom: 0;
+            }
+        }
+    }
+}

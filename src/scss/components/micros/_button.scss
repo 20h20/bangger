@@ -1,0 +1,79 @@
+/* -------------------------------
+   BUTTON COMPONENT
+------------------------------- */
+.cbo-button,
+input[type="submit"] {
+  gap: 0.875rem;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(2.125rem);
+  box-shadow: 0 0 0 1px rgba($colorwhite, .5) inset;
+  color: $colorwhite;
+  border-radius: 99rem;
+  height: 3.125rem;
+  padding: 0 0.625rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all .4s;
+
+  .button-label {
+    margin-left: 0.625rem;
+    transition: opacity 0.4s ease;
+    z-index: 3;
+  }
+  i {
+    color: $colorblack;
+    font-size: 0.75rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.1875rem;
+    height: 2.1875rem;
+    position: relative;
+    transition: all 0.5s $easeinout;
+    z-index: 2;
+
+    &:before{
+      z-index: 2;
+    }
+    &:after{
+      content: '';
+      position: absolute;
+      background: $colorwhite;
+      border-radius: 99rem;
+      width: 2.1875rem;
+      height: 2.1875rem;
+      transition: all 0.5s $easeinout;
+    }
+  }
+  &:hover {
+    .button-label {
+      color: $colorblack;
+    }
+    i {
+      &:after{
+       transform: scale(10);
+      }
+    }
+  }
+}
+/* -------------------------------
+MEDIUM SCREENS
+------------------------------- */
+@media (min-width:$screen-md-min) {
+  .cbo-button,
+  input[type="submit"]{
+    height: 4.375rem;
+
+    i{
+      width: 3.125rem;
+      height: 3.125rem;
+
+      &:after{
+        width: 3.125rem;
+        height: 3.125rem;
+      }
+    }
+  }
+}
